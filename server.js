@@ -8,6 +8,12 @@ app.get("/", (req, res) => {
   res.send("Hello World");
 });
 
+// SCRIPT ROUTE
+app.get("/script", (req, res) => {
+  res.type("text/plain");
+  res.send('Write-Host "Hello from my server"');
+});
+
 // LOGIN API
 app.post("/Lnw/login", (req, res) => {
   const { username, password } = req.body;
